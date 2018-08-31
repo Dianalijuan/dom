@@ -1,0 +1,24 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <title>登录界面</title>
+        <script src="js/vendor/jquery-3.2.1.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        用户名：<input id="username" name="username" type="text">
+        密码：<input id="password" name="password" onclick="clearInput" type="password">
+        <input type="button" onclick="OnSubmit()" value="提交">
+    <script>
+        function OnSubmit() {
+           userName = document.getElementById('username')
+            psw = document.getElementById('password')
+            if(userName.value === '123' && psw.value === '123'){
+               alert('登录成功')
+            }else{
+               document.getElementById('password').value = ""
+            }
+        }
+    </script>
+    </body>
+</html>
